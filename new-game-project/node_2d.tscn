@@ -73,8 +73,8 @@ texture_filter = 1
 position = Vector2(367, 170)
 texture = ExtResource("2_0e48y")
 
-[node name="Camera2D" type="Camera2D" parent="PLAYER/PixilFrame0(2)" unique_id=2026203195]
-position = Vector2(24, -5)
+[node name="Camera2D" type="Camera2D" parent="PLAYER" unique_id=2026203195]
+position = Vector2(391, 165)
 zoom = Vector2(4, 4)
 
 [node name="TheRock" type="Sprite2D" parent="." unique_id=1625459666]
