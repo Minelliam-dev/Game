@@ -18,6 +18,6 @@ shape = SubResource("CircleShape2D_itlf6")
 [node name="Player" type="Sprite2D" parent="."]
 z_index = 2
 texture_filter = 1
-position = Vector2(25, -137)
+position = Vector2(14.000015, -225)
 scale = Vector2(50, 40.4375)
 texture = ExtResource("2_ptyfm")
