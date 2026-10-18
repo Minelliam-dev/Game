@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 40  # speed in pixels/sec
+var speed = 20
 
 var i = 0
 
@@ -19,7 +19,9 @@ func _physics_process(delta):
 		player.animation = "left"
 	elif (direction.y == -1):
 		player.animation = "up"
-	else:
+	elif (direction.y == 1):
+		player.animation = "down"
+	elif (direction == Vector2(0, 0)):
 		player.animation = "down"
 	
 	position += velocity

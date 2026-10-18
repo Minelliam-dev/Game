@@ -85,6 +85,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkjhf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3010"]
+
 [node name="Node2D" type="Node2D" unique_id=1612236685]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=914711178]
@@ -102,7 +106,6 @@ tile_map_data = PackedByteArray("AAAhAFoAAAABAAAAAAAAAA8AAQAAAAAAAAAAAA0AAQABAAA
 tile_set = SubResource("TileSet_epypp")
 
 [node name="PLAYER" type="CharacterBody2D" parent="." unique_id=148821554]
-position = Vector2(6, -10)
 script = ExtResource("2_epypp")
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER" unique_id=2026203195]
@@ -110,16 +113,23 @@ position = Vector2(391, 165)
 zoom = Vector2(4, 4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PLAYER" unique_id=1688984569]
+z_index = 21
 texture_filter = 1
-position = Vector2(394, 166)
+position = Vector2(391, 165)
 sprite_frames = SubResource("SpriteFrames_gkjhf")
 animation = &"down"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PLAYER" unique_id=966831300]
+shape = SubResource("RectangleShape2D_gkjhf")
+
 [node name="TheRock" type="Sprite2D" parent="." unique_id=1625459666]
 texture_filter = 1
-position = Vector2(438.5, 177)
-scale = Vector2(0.3125, 0.25)
+position = Vector2(200.00003, 199.00002)
+scale = Vector2(0.9375, 5.25)
 texture = ExtResource("3_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TheRock" unique_id=1476609939]
+shape = SubResource("RectangleShape2D_f3010")
 
 [node name="TreesAreAwsome" type="Sprite2D" parent="." unique_id=16708035]
 texture_filter = 1
