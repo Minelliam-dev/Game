@@ -4,6 +4,8 @@ var speed = 40  # speed in pixels/sec
 
 var i = 0
 
+@onready var player = $"AnimatedSprite2D"
+
 func _physics_process(delta):
 	if (Input.is_key_pressed(KEY_E)):
 		print("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
@@ -11,14 +13,15 @@ func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity += (direction * speed) * delta
 	
+	if (direction.x == 1):
+		player.animation = "right"
+	elif (direction.x == -1):
+		player.animation = "left"
+	elif (direction.y == -1):
+		player.animation = "up"
+	else:
+		player.animation = "down"
+	
 	position += velocity
 	
 	velocity = velocity.lerp(Vector2(0, 0), 0.3)
-	
-	Engine.max_fps = 0
-	
-	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
-	
-	print(Engine.get_frames_per_second())
-
-	i += (1/60)
