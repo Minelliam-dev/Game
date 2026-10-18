@@ -17,14 +17,10 @@ func _physics_process(delta):
 	
 	FPS = (1/delta)
 	
-	if (i == 1):
-		while true:
-			var rng = GetRandomNumber(0, 20000)
-			
-			if (rng == 1):
-				break
-			else:
-				print(rng)
+	for i in range(7000):
+		GetRandomNumber(9999999, 99999999999999999)
+		
+	print(FPS)
 	
 	move_and_slide()
 	i += 1
