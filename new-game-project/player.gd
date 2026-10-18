@@ -8,7 +8,7 @@ var i = 0
 var rng = RandomNumberGenerator.new()
 
 func GetRandomNumber(a=0, b=1):
-	return rng.randf_range(a, b)
+	return rng.randi_range(a, b)
 
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -17,10 +17,14 @@ func _physics_process(delta):
 	
 	FPS = (1/delta)
 	
-	if (i == 2):
+	if (i == 1):
 		while true:
-			if (GetRandomNumber(0, 20) == 20):
+			var rng = GetRandomNumber(0, 20000)
+			
+			if (rng == 1):
 				break
+			else:
+				print(rng)
 	
 	move_and_slide()
 	i += 1
