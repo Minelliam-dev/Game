@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://cqt44xxg1pleh"]
 
+[ext_resource type="PackedScene" uid="uid://xfuh44qso0ly" path="res://node_2d.tscn" id="1_37kl0"]
+
 [node name="test" type="Node2D" unique_id=1023738943]
+
+[node name="Node2D" parent="." unique_id=1970379260 instance=ExtResource("1_37kl0")]
+modulate = Color(0.8560673, 0.8560673, 0.85606724, 1)

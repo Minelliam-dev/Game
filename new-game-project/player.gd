@@ -1,26 +1,13 @@
 extends CharacterBody2D
 
-var speed = 1600  # speed in pixels/sec
+var speed = 50  # speed in pixels/sec
 
-var FPS = 60.0
-var i = 0
 
-var rng = RandomNumberGenerator.new()
-
-func GetRandomNumber(a=0, b=1):
-	return rng.randi_range(a, b)
 
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
+	velocity = direction * speed
+
 	
-	velocity = (direction * speed)*delta
-	
-	FPS = (1/delta)
-	
-	for i in range(7000):
-		GetRandomNumber(9999999, 99999999999999999)
-		
-	print(FPS)
-	
+
 	move_and_slide()
-	i += 1
