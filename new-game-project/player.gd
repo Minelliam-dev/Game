@@ -5,6 +5,9 @@ var speed = 50  # speed in pixels/sec
 var i = 0
 
 func _physics_process(delta):
+	if (Input):
+		print("copy")
+	
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
 
