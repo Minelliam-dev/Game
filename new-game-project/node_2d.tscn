@@ -54,7 +54,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q6r6c")
 sources/5 = SubResource("TileSetAtlasSource_rj586")
 
+<<<<<<< HEAD
 [node name="Node2D" type="Node2D"]
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djs7a"]
+size = Vector2(16, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0j881"]
+
+[node name="Node2D" type="Node2D" unique_id=267231677]
+>>>>>>> 708174c909b0d6ad353f2cd64a3b16e484b301d8
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
@@ -71,6 +80,7 @@ position = Vector2(167, 42)
 tile_map_data = PackedByteArray("AAAhAFoAAAABAAAAAAD8//z/AAACAAAAAAD8//3/AAACAAAAAAD8//7/AAACAAAAAAD8////AAACAAAAAAD9/wAAAAABAAAAAAD8/wEAAAACAAAAAAD8/wAAAAACAAAAAAD7////AAACAAAAAAD7//7/AAACAAAAAAD7//3/AAACAAAAAAD7//z/AAACAAAAAAD6//v/AAACAAAAAAD6//r/AAACAAAAAAD6//n/AAACAAAAAAD6//j/AAACAAAAAAD5//f/AAACAAAAAAD5//b/AAACAAAAAAD4//X/AAACAAAAAAD3//X/AAACAAAAAAD4//T/AAACAAAAAAD5//T/AAACAAAAAAD5//X/AAACAAAAAAD6//b/AAACAAAAAAD6//f/AAACAAAAAAD7//j/AAACAAAAAAD7//n/AAACAAAAAAD8//r/AAACAAAAAAD8//v/AAACAAAAAAD7//r/AAACAAAAAAD7//v/AAACAAAAAAD5//L/AAABAAAAAAD5//P/AAABAAAAAAD6//P/AAABAAAAAAD7//T/AAABAAAAAAD6//X/AAABAAAAAAD7//b/AAABAAAAAAD7//f/AAABAAAAAAD8//f/AAABAAAAAAD8//j/AAABAAAAAAD8//n/AAACAAAAAAD8//b/AAABAAAAAAD7//X/AAABAAAAAAD6//T/AAABAAAAAAD6//L/AAABAAAAAAD6//H/AAABAAAAAAD6//D/AAABAAAAAAD5/+//AAABAAAAAAD5//D/AAABAAAAAAD5//H/AAABAAAAAAD7//L/AAABAAAAAAD7//P/AAABAAAAAAD8//T/AAABAAAAAAD8//X/AAABAAAAAAD9//b/AAABAAAAAAD9//f/AAABAAAAAAD9//j/AAABAAAAAAD9//n/AAABAAAAAAD+//r/AAABAAAAAAD9//v/AAABAAAAAAD9//r/AAABAAAAAAD9//z/AAABAAAAAAD9//3/AAACAAAAAAD9//7/AAACAAAAAAD9////AAABAAAAAAD+//7/AAABAAAAAAD+//z/AAABAAAAAAD+//v/AAABAAAAAAD+//n/AAABAAAAAAD+//j/AAABAAAAAAD+//f/AAABAAAAAAD+//b/AAABAAAAAAD5//n/AAACAAAAAAD5//j/AAACAAAAAAD4//f/AAACAAAAAAD3//b/AAACAAAAAAA=")
 tile_set = SubResource("TileSet_epypp")
 
+<<<<<<< HEAD
 [node name="PLAYER" type="CharacterBody2D" parent="."]
 position = Vector2(6, -10)
 script = ExtResource("2_epypp")
@@ -86,6 +96,9 @@ position = Vector2(24, -5)
 zoom = Vector2(4, 4)
 
 [node name="TheRock" type="Sprite2D" parent="."]
+=======
+[node name="TheRock" type="Sprite2D" parent="." unique_id=1697565058]
+>>>>>>> 708174c909b0d6ad353f2cd64a3b16e484b301d8
 texture_filter = 1
 position = Vector2(387, 170)
 texture = ExtResource("3_epypp")
@@ -94,3 +107,23 @@ texture = ExtResource("3_epypp")
 texture_filter = 1
 position = Vector2(392, 132)
 texture = ExtResource("5_q6r6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreesAreAwsome" unique_id=1255530278]
+shape = SubResource("RectangleShape2D_djs7a")
+
+[node name="PLAYER" type="CharacterBody2D" parent="." unique_id=1831073423]
+position = Vector2(6, -10)
+script = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PLAYER" unique_id=1432438827]
+shape = SubResource("RectangleShape2D_0j881")
+
+[node name="PixilFrame0(2)" type="Sprite2D" parent="PLAYER" unique_id=1275558738]
+z_index = 2
+texture_filter = 1
+position = Vector2(367, 170)
+texture = ExtResource("2_0e48y")
+
+[node name="Camera2D" type="Camera2D" parent="PLAYER" unique_id=1793483499]
+position = Vector2(366, 170)
+zoom = Vector2(4, 4)
