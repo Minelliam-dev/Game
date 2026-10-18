@@ -128,8 +128,12 @@ position = Vector2(200.00003, 199.00002)
 scale = Vector2(0.9375, 5.25)
 texture = ExtResource("3_epypp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TheRock" unique_id=1476609939]
+[node name="Area2D" type="Area2D" parent="TheRock" unique_id=1298055045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TheRock/Area2D" unique_id=1476609939]
+position = Vector2(-3.2552085e-05, -2.906436e-06)
 shape = SubResource("RectangleShape2D_f3010")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="TreesAreAwsome" type="Sprite2D" parent="." unique_id=16708035]
 texture_filter = 1

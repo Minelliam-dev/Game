@@ -26,4 +26,11 @@ func _physics_process(delta):
 	
 	position += velocity
 	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		var other = collision.get_collider()
+	
+		print("Collided with: ", other.name)
+		print("Position: ", collision.get_position())
+	
 	velocity = velocity.lerp(Vector2(0, 0), 0.3)
