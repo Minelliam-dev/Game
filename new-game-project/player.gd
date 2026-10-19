@@ -1,10 +1,13 @@
-extends CharacterBody2D
+extends Area2D
 
 var speed = 20
-
 var i = 0
 
 @onready var player = $"AnimatedSprite2D"
+var velocity = Vector2(0, 0)
+var lvelocity = Vector2(0, 0)
+
+var colliding = false
 
 func _physics_process(delta):
 	if (Input.is_key_pressed(KEY_E)):
@@ -24,13 +27,17 @@ func _physics_process(delta):
 	elif (direction == Vector2(0, 0)):
 		player.animation = "down"
 	
-	position += velocity
-	
-	for i in range(get_slide_collision_count()):
-		var collision = get_slide_collision(i)
-		var other = collision.get_collider()
-	
-		print("Collided with: ", other.name)
-		print("Position: ", collision.get_position())
-	
+	if (!colliding):
+		position += velocity
+	if (colliding):
+		position -= lvelocity
+		
 	velocity = velocity.lerp(Vector2(0, 0), 0.3)
+	
+	lvelocity = velocity
+
+func _on_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	colliding = true
+
+func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	colliding = false
