@@ -16,16 +16,25 @@ func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity += (direction * speed) * delta
 	
-	if (direction.x == 1):
-		player.animation = "right"
-	elif (direction.x == -1):
-		player.animation = "left"
-	elif (direction.y == -1):
+	if (direction == Vector2(0, 0)):
+		player.animation = "down"
+	elif (direction == Vector2(0, 1)):
+		player.animation = "down"
+	elif (direction == Vector2(0, -1)):
 		player.animation = "up"
-	elif (direction.y == 1):
-		player.animation = "down"
-	elif (direction == Vector2(0, 0)):
-		player.animation = "down"
+	elif (direction == Vector2(1, 0)):
+		player.animation = "right"
+	elif (direction == Vector2(-1, 0)):
+		player.animation = "left"
+		
+	elif (direction == Vector2(1, 1)):
+		player.animation = "down-right"
+	elif (direction == Vector2(-1, -1)):
+		player.animation = "up-right"
+	elif (direction == Vector2(1, 1)):
+		player.animation = "down-left"
+	elif (direction == Vector2(-1, -1)):
+		player.animation = "down-right"
 	
 	if (!colliding):
 		position += velocity
