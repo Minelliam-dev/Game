@@ -190,7 +190,7 @@ script = ExtResource("2_epypp")
 z_index = 21
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gkjhf")
-animation = &"down-right"
+animation = &"left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="game scene/player" unique_id=1183779522]
 position = Vector2(-0.5, 0)
