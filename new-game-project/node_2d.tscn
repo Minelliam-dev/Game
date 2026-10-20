@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bqqawd5h8b1n3" path="res://Player(testing)/Player-up-right.png" id="12_0h7mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3010"]
-size = Vector2(20, 11.999998)
+size = Vector2(14.933296, 11.999998)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gkjhf"]
 animations = [{
@@ -181,7 +181,7 @@ texture = ExtResource("3_epypp")
 [node name="Area2D" type="Area2D" parent="game scene/TheRock" unique_id=1506861548]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="game scene/TheRock/Area2D" unique_id=1341308871]
-position = Vector2(-3.0517578e-05, 1.047615)
+position = Vector2(-1.5258789e-05, 1.0476141)
 shape = SubResource("RectangleShape2D_f3010")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
