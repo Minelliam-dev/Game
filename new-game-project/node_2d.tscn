@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://d1okyo8yoxj8j" path="res://Player(testing)/Player-left.png" id="4_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://dn7ow8rgl3u5s" path="res://Player(testing)/Player-right.png" id="5_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://boqu5qurq227d" path="res://Player(testing)/Player-up.png" id="6_hqns4"]
-[ext_resource type="Texture2D" uid="uid://bj5bserlljnye" path="res://Player(testing)/Player-down-left.png" id="8_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://u3a5j3hymeqi" path="res://down-left.png" id="8_nr8wp"]
 [ext_resource type="Script" uid="uid://04ns05ej6y2k" path="res://camera.gd" id="8_rj586"]
-[ext_resource type="Texture2D" uid="uid://bkurvc8otvfk4" path="res://Player(testing)/Player-down-right.png" id="9_d2bti"]
+[ext_resource type="Texture2D" uid="uid://s75ubifx8q8f" path="res://down-right.png" id="9_nr8wp"]
 [ext_resource type="Texture2D" uid="uid://cxqvsjtmmfbkw" path="res://Player(testing)/Player-up-left.png" id="11_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://bqqawd5h8b1n3" path="res://Player(testing)/Player-up-right.png" id="12_0h7mo"]
 
@@ -38,7 +38,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_d2bti")
+"texture": ExtResource("9_nr8wp")
 }],
 "loop": 1,
 "name": &"down-right",
@@ -194,7 +194,7 @@ script = ExtResource("2_epypp")
 z_index = 21
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gkjhf")
-animation = &"up-right"
+animation = &"down-left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="game scene/player" unique_id=1669264028]
 position = Vector2(-0.5, 0)
