@@ -77,6 +77,28 @@ tooltip_text = "Start game"
 text = "Start game"
 script = ExtResource("3_ir8iy")
 
+[node name="Label" type="Label" parent="menu" unique_id=419193410]
+offset_left = -41.0
+offset_top = -56.0
+offset_right = 41.0
+offset_bottom = -33.0
+text = "Game title"
+
+[node name="Button2" type="Button" parent="menu" unique_id=1515933863]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -37.32
+offset_top = 4.665
+offset_right = 55.68
+offset_bottom = 35.665
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.555, 0.555)
+tooltip_text = "Start game"
+text = "Start game"
+
 [node name="game scene" type="Node2D" parent="." unique_id=226371073]
 visible = false
 
