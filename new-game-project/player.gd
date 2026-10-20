@@ -32,10 +32,10 @@ func _physics_process(delta):
 		player.play("down-right")
 	elif (direction == Vector2(-1, -1)):
 		player.play("up-left")
-	elif (direction == Vector2(1, 1)):
-		player.play("down-right")
-	elif (direction == Vector2(-1, -1)):
-		player.play("down-right")
+	elif (direction == Vector2(-1, 1)):
+		player.play("down-left")
+	elif (direction == Vector2(1, -1)):
+		player.play("up-right")
 	
 	if (!colliding):
 		position += velocity
