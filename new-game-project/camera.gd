@@ -1,6 +1,6 @@
 extends Camera2D
 
-@onready var target = get_node("../player")
+@onready var target = get_node("../game scene/player")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
