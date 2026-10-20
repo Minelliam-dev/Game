@@ -16,7 +16,7 @@ func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity += (direction * speed) * delta
 	
-	direction.sign()
+	direction = direction.sign()
 	
 	if (direction == Vector2(0, 0)):
 		player.play("down")
@@ -31,9 +31,9 @@ func _physics_process(delta):
 	elif (direction == Vector2(1, 1)):
 		player.play("down-right")
 	elif (direction == Vector2(-1, -1)):
-		player.play("up-right")
+		player.play("up-left")
 	elif (direction == Vector2(1, 1)):
-		player.play("down-left")
+		player.play("down-right")
 	elif (direction == Vector2(-1, -1)):
 		player.play("down-right")
 	
