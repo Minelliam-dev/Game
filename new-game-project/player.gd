@@ -32,7 +32,8 @@ func _physics_process(delta):
 		return
 	
 	if (Input.is_key_pressed(KEY_E)):
-		print("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
+		for i in range(9999):
+			print("69")
 	
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity += (direction * speed) * delta

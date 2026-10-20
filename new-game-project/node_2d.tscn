@@ -113,6 +113,7 @@ scale = Vector2(0.555, 0.555)
 tooltip_text = "Quit Game"
 text = "Quit Game"
 script = ExtResource("3_ir8iy")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="menu" unique_id=653621711]
 z_index = 1
@@ -124,6 +125,7 @@ offset_bottom = -33.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 text = "Game title"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="menu" unique_id=165507734]
 texture_filter = 1
@@ -139,6 +141,7 @@ grow_vertical = 2
 scale = Vector2(0.555, 0.555)
 tooltip_text = "Start game"
 text = "Start game"
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="menu" unique_id=1184609085]
 z_index = -1
