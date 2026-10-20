@@ -183,6 +183,7 @@ texture = ExtResource("3_epypp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="game scene/TheRock/Area2D" unique_id=1341308871]
 position = Vector2(-1.5258789e-05, 1.0476141)
 shape = SubResource("RectangleShape2D_f3010")
+one_way_collision = true
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="player" type="Area2D" parent="game scene" unique_id=1089811485]
