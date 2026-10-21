@@ -81,3 +81,18 @@ func _on_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, 
 
 func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	colliding = false
+
+enum layers{
+	level0 = 0,
+	level1 = 1,
+	level2 = 2,
+	}
+
+func place_boundaries():
+	var offsets = [
+		Vector2i(0, -1),
+		Vector2i(0, 1),
+		Vector2i(1, 0),
+		Vector2i(-1, 0),
+	]
+	
